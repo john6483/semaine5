@@ -2,27 +2,37 @@
  <head>
  <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
  <link href=mycss.css rel="stylesheet" type="text/css" media="all"/>
- <script src="http://maps.googleapis.com/maps/api/js"></script>
- <script>
-   function initCarte(){
-     // création de la carte
-     var oMap = new google.maps.Map( document.getElementById( 'div_carte'),{
-       'center' : new google.maps.LatLng( 47.099217, 2.414908),
-       'zoom' : 12
-     });
-   }
-   // init lorsque la page est chargée
-   google.maps.event.addDomListener( window, 'load', initCarte);
+ /*  pour googlemap */
+  <style>
+      #div_carte {
+        height : 300px; /* IMPERATIF */
+        width : 600px;
+        margin : auto;
+        border : 1px solid #888;
+      }
+    </style>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initCarte(){
+        // création de la carte
+        var oMap = new google.maps.Map( document.getElementById( 'div_carte'),{
+          'center' : new google.maps.LatLng( 47.099217, 2.414908),
+          'zoom' : 12
+        });
+      }
+      // init lorsque la page est chargée
+      google.maps.event.addDomListener( window, 'load', initCarte);
 
 
- //mettre un marqueur ici
- var optionsMarqueur = {
- position: oMap.getCenter(),
- map: oMap
-};
-var marqueur = new google.maps.Marker(optionsMarqueur);
+	  //mettre un marqueur ici
+	  var optionsMarqueur = {
+		position: oMap.getCenter(),
+		map: oMap
+	};
+	var marqueur = new google.maps.Marker(optionsMarqueur);
 
- </script>
+    </script>
+ /* fin googlemap */
 
  </head>
 
@@ -82,7 +92,8 @@ var marqueur = new google.maps.Marker(optionsMarqueur);
 				<p><b>Mobile:</b> 06 95 71 75 50 ou 06 88 81 20 68</p>
 
 				<p><b>Mail:</b> f.hang@laposte.net</p>
-        <div id="div_carte" </div>
+				<div id="div_carte" </div>
+
 		</div>
 	</div> <!-- fin du container -->
 
